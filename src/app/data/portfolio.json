@@ -1,0 +1,44 @@
+{
+  "portfolio": [
+    {
+      "title" : "Healler",
+      "description" : "It's a platform that connects people with health professionals. It is a platform that allows people to book appointments with health professionals and have video calls with them.",
+      "id" : "1",
+      "image" : "/nft.jpg",
+      "image-alt" : "Healler Image",
+      "live-url" : "https://www.healler.com",
+      "github-url" : "https://www.github.com/kolapowariz/healler",
+      "technologies" : ["React", "Node.js", "MongoDB"]
+    },
+    {
+      "title" : "Chatter",
+      "description" : "In this age of pictures, hashtags, Reels, TikTok, likes, and comments, a traditional bookworm’s heaven would be a blog to access more text-based content. Chatter aims to be that heaven specifically for this kind of audience. It is a multi-functional platform for authors and readers to create and access content.",
+      "id" : "2",
+      "image" : "/nft.jpg",
+      "image-alt" : "Healler Image",
+      "live-url" : "https://www.chatter.com",
+      "github-url" : "https://www.github.com/kolapowariz/chatter",
+      "technologies" : ["React", "Node.js", "MongoDB"]
+    },
+    {
+      "title" : "NFT Marketplace",
+      "description" : "NFT Marketplace is a platform that connects people with health professionals. It is a platform that allows people to book appointments with health professionals and have video calls with them.",
+      "id" : "3",
+      "image" : "/nft.jpg",
+      "image-alt" : "Healler Image",
+      "live-url" : "https://www.nft.com",
+      "github-url" : "https://www.github.com/kolapowariz/nft-marketplace",
+      "technologies" : ["React", "Node.js", "MongoDB"]
+    },
+    {
+      "title" : "E-commerce",
+      "description" : "E-commerce is a platform that connects people with health professionals. It is a platform that allows people to book appointments with health professionals and have video calls with them.",
+      "id" : "4",
+      "image" : "/nft.jpg",
+      "image-alt" : "Healler Image",
+      "live-url" : "https://www.ecommerce.com",
+      "github-url" : "https://www.github.com/kolapowariz/ecommerce",
+      "technologies" : ["React", "Node.js", "MongoDB"]
+    }
+  ]
+}
