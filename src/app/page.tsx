@@ -16,7 +16,12 @@ export default function Home() {
       <header className='lg:hidden flex justify-between items-center mt-4 mx-4'>
         <h1 className='text-sm'>Kolapo Wariz</h1>
         <nav className='flex flex-col justify-center items-end'>
-          {/* <button onClick={toggle}>{click ? <MdCancel className='w-8 h-8 ' /> : <FiAlignJustify className='w-8 h-8' />}</button> */}
+          <button onClick={toggle}>{click ? <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6">
+            <path fillRule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25Zm-1.72 6.97a.75.75 0 1 0-1.06 1.06L10.94 12l-1.72 1.72a.75.75 0 1 0 1.06 1.06L12 13.06l1.72 1.72a.75.75 0 1 0 1.06-1.06L13.06 12l1.72-1.72a.75.75 0 1 0-1.06-1.06L12 10.94l-1.72-1.72Z" clipRule="evenodd" />
+          </svg> : <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6">
+            <path fillRule="evenodd" d="M3 5.25a.75.75 0 0 1 .75-.75h16.5a.75.75 0 0 1 0 1.5H3.75A.75.75 0 0 1 3 5.25Zm0 4.5A.75.75 0 0 1 3.75 9h16.5a.75.75 0 0 1 0 1.5H3.75A.75.75 0 0 1 3 9.75Zm0 4.5a.75.75 0 0 1 .75-.75h16.5a.75.75 0 0 1 0 1.5H3.75a.75.75 0 0 1-.75-.75Zm0 4.5a.75.75 0 0 1 .75-.75h16.5a.75.75 0 0 1 0 1.5H3.75a.75.75 0 0 1-.75-.75Z" clipRule="evenodd" />
+          </svg>
+          }</button>
         </nav>
       </header>
       <main className='lg:hidden'>
@@ -58,7 +63,7 @@ export default function Home() {
             <Image src='/nft.jpg' width={338} height={344} alt="Kolapo Wariz" priority={true} className='block mt-6  lg:h-96 lg:w-96 mx-auto rounded-full object-cover' />
           </section>
         </section>
-        
+
         <section>
           <h2 className='text-center text-4xl mt-10'>Projects</h2>
           <div className='xl:grid lg:grid-cols-2 lg:gap-4'>
@@ -69,9 +74,9 @@ export default function Home() {
                     <p>{data.title}</p>
                     <p className='mb-4'>{data.description}</p>
                     <Link href='/project' className='text-blue-500 border-slate-800 border rounded-lg p-2'>View Project</Link>
-                    
+
                   </div>
-                  <div className='w-full h-72 rounded-b-xl lg:rounded-none lg:w-96 lg:h-96 bg-gray-200 lg:rounded-e-2xl p-5'>
+                  <div className='w-full h-auto rounded-b-xl lg:rounded-none lg:w-96 lg:h-96 bg-gray-200 lg:rounded-e-2xl p-5'>
                     <Image src={data.image} alt={data['image-alt']} width={338} height={344} className='mx-auto' />
                   </div>
                 </div>
