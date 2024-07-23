@@ -1,24 +1,39 @@
 'use client';
 import Image from "next/image";
-import { useState } from "react";
-import portdata from '@/app/data/portfolio.json'
+import { useEffect, useState } from "react";
 import Link from "next/link";
+import { motion } from 'framer-motion'
 
+type ProjectType = {
+  id: number;
+  title: string;
+  description: string;
+  image: string;
+  imageAlt: string;
+};
 
 export default function Home() {
   const [click, setClick] = useState(false);
+  const [projects, setProjects] = useState<ProjectType[]>([]);
+  useEffect(() => {
+    fetch('/data/portfolio.json')
+      .then(res => res.json())
+      .then(data => setProjects(data))
+  }, []);
+  
 
   const toggle = () => {
     setClick(prev => !prev)
   }
   return (
-    <div className='w-full mx-auto lg:w-[95%] lg:mx-auto bg-[#ffbb8b] p-5 lg:m-5'>
-      <header className='lg:hidden flex justify-between items-center mt-4 mx-4'>
-        <h1 className='text-sm'>Kolapo Wariz</h1>
+    <div className='w-full mx-auto lg:w-[95%] lg:mx-auto bg-[#09233c] p-5 lg:m-5 text-gray-200'>
+      <header className='lg:hidden flex justify-between items-center mt-4 mx-auto py-5 px-3 w-full bg-[#2a455e] shadow-2xl rounded-md'>
+        <motion.h1 initial={{ x: -200 }} animate={{ x: 0 }} transition={{ duration: 2 }} className='text-md'>Kolapo Wariz</motion.h1>
         <nav className='flex flex-col justify-center items-end'>
           <button onClick={toggle}>{click ? <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6">
-            <path fillRule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25Zm-1.72 6.97a.75.75 0 1 0-1.06 1.06L10.94 12l-1.72 1.72a.75.75 0 1 0 1.06 1.06L12 13.06l1.72 1.72a.75.75 0 1 0 1.06-1.06L13.06 12l1.72-1.72a.75.75 0 1 0-1.06-1.06L12 10.94l-1.72-1.72Z" clipRule="evenodd" />
-          </svg> : <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6">
+  <path fill-rule="evenodd" d="M5.47 5.47a.75.75 0 0 1 1.06 0L12 10.94l5.47-5.47a.75.75 0 1 1 1.06 1.06L13.06 12l5.47 5.47a.75.75 0 1 1-1.06 1.06L12 13.06l-5.47 5.47a.75.75 0 0 1-1.06-1.06L10.94 12 5.47 6.53a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" />
+</svg>
+ : <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6">
             <path fillRule="evenodd" d="M3 5.25a.75.75 0 0 1 .75-.75h16.5a.75.75 0 0 1 0 1.5H3.75A.75.75 0 0 1 3 5.25Zm0 4.5A.75.75 0 0 1 3.75 9h16.5a.75.75 0 0 1 0 1.5H3.75A.75.75 0 0 1 3 9.75Zm0 4.5a.75.75 0 0 1 .75-.75h16.5a.75.75 0 0 1 0 1.5H3.75a.75.75 0 0 1-.75-.75Zm0 4.5a.75.75 0 0 1 .75-.75h16.5a.75.75 0 0 1 0 1.5H3.75a.75.75 0 0 1-.75-.75Z" clipRule="evenodd" />
           </svg>
           }</button>
@@ -26,7 +41,7 @@ export default function Home() {
       </header>
       <main className='lg:hidden'>
         <div className={click ? '' : 'hidden'}>
-          <ul className='py-2 text-center'>
+          <ul className='py-2 text-center bg-[#2a455e] mt-2 rounded-md'>
             <li className='py-2 text-sm'>About Me</li>
             <li className='py-2 text-sm'>Projects</li>
             <li className='py-2 text-sm'>Contacts</li>
@@ -49,7 +64,7 @@ export default function Home() {
 
       <main className='my-4'>
         <section id='#' className='flex flex-col lg:flex-row lg:justify-between lg:items-start'>
-          <section className='order-last lg:order-first lg:w-3/5'>
+          <motion.section initial={{ x: -400 }} animate={{ x: 0 }} transition={{ duration: 2 }} className='order-last lg:order-first lg:w-3/5'>
             <p className='text-2xl lg:text-3xl my-4'>Hi there! Call me Wariz,</p>
             <p className='text-3xl lg:text-4xl my-4'>FrontEnd developer.</p>
             <section id='about' className='mt-5'>
@@ -58,7 +73,7 @@ export default function Home() {
               <p>However, my journey took an unexpected turn when I stumbled upon JavaScript, a language that ignited a deep-seated passion within me. From that point on, My path was crystal clear - I was meant to pursue a career in web development.</p>
               <p>This newfound passion has been the driving force behind my relentless quest for self-improvement, pushing me to continually refine my skills, keep abreast of the latest industry trends, and adhere to best practices in the field.</p>
             </section>
-          </section>
+          </motion.section>
           <section>
             <Image src='/nft.jpg' width={338} height={344} alt="Kolapo Wariz" priority={true} className='block mt-6  lg:h-96 lg:w-96 mx-auto rounded-full object-cover' />
           </section>
@@ -67,17 +82,17 @@ export default function Home() {
         <section>
           <h2 className='text-center text-4xl mt-10'>Projects</h2>
           <div className='xl:grid lg:grid-cols-2 lg:gap-4'>
-            {portdata.portfolio.map((data, index) => {
+            {projects.map((data) => {
               return (
-                <div key={index} className='flex flex-col lg:flex-row justify-center items-center my-7 '>
-                  <div className='w-full h-auto min-h-72 rounded-t-xl lg:rounded-none lg:w-96 lg:h-96 bg-gray-200 lg:rounded-s-2xl p-5'>
+                <div key={data.id} className='flex flex-col lg:flex-row justify-center items-center my-7 '>
+                  <div className='w-full h-auto min-h-72 rounded-t-xl lg:rounded-none lg:w-96 lg:h-96 bg-gray-200 text-black lg:rounded-s-2xl p-5'>
                     <p>{data.title}</p>
                     <p className='mb-4'>{data.description}</p>
-                    <Link href='/project' className='text-blue-500 border-slate-800 border rounded-lg p-2'>View Project</Link>
+                    <Link href={`/${data.title}`} className='text-blue-500 border-slate-800 border rounded-lg p-2'>View Project</Link>
 
                   </div>
                   <div className='w-full h-auto rounded-b-xl lg:rounded-none lg:w-96 lg:h-96 bg-gray-200 lg:rounded-e-2xl p-5'>
-                    <Image src={data.image} alt={data['image-alt']} width={338} height={344} className='mx-auto' />
+                    <Image src={data.image} alt={data.imageAlt} width={338} height={344} className='mx-auto' />
                   </div>
                 </div>
               )
