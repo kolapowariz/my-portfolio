@@ -1,0 +1,22 @@
+[
+  {
+    "title": "Healler",
+    "description": "It's a platform that connects people with health professionals. It is a platform that allows people to book appointments with health professionals and have video calls with them.",
+    "id": "1",
+    "image": "/nft.jpg",
+    "imageAlt": "Healler Image",
+    "liveUrl": "https://www.healler.com",
+    "githubUrl": "https://github.com/kolapowariz/healler",
+    "technologies": ["React", "Node.js", "MongoDB"]
+  },
+  {
+    "title": "WaveSort",
+    "description": "In this age of pictures, hashtags, Reels, TikTok, likes, and comments, a traditional bookworm’s heaven would be a blog to access more text-based content. WaveSort aims to be that heaven specifically for this kind of audience. It is a multi-functional platform for authors and readers to create and access content.",
+    "id": "2",
+    "image": "/nft.jpg",
+    "imageAlt": "Healler Image",
+    "liveUrl": "https://www.chatter.com",
+    "githubUrl": "https://github.com/kolapowariz/wavesort",
+    "technologies": ["React", "Node.js", "MongoDB"]
+  }
+]
