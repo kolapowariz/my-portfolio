@@ -3,13 +3,8 @@
 import { useEffect, useState } from 'react';
 import { useParams } from 'next/navigation';
 import Image from 'next/image';
-type ProjectType = {
-  id: number;
-  title: string;
-  description: string;
-  image: string;
-  imageAlt: string;
-};
+import { ProjectType } from '@/app/types';
+
 
 export default function Project() {
   const [project, setProject] = useState<ProjectType | null>(null);
@@ -34,11 +29,10 @@ export default function Project() {
   if (!project) return <h1>Loading...</h1>;
 
   return (
-    <div>
-      <h1>Welcome to the project section</h1>
-      <p>{project.title}</p>
+    <div className='m-4'>
+      <p className='text-4xl font-extrabold text-center p-2'>{project.title}</p>
       <p>{project.description}</p>
-      {/* <Image src={project.image} alt={project.imageAlt} width={400} height={400} /> */}
+      <Image src={project.image} alt={project.imageAlt} width={400} height={400} className='w-full h-auto rounded-lg' />
     </div>
   );
 }

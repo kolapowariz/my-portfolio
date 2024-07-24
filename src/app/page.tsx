@@ -3,14 +3,7 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import { motion } from 'framer-motion'
-
-type ProjectType = {
-  id: number;
-  title: string;
-  description: string;
-  image: string;
-  imageAlt: string;
-};
+import { ProjectType } from "@/app/types";
 
 export default function Home() {
   const [click, setClick] = useState(false);
@@ -55,9 +48,9 @@ export default function Home() {
               <li className='py-2'><Link href="">Resume</Link></li>
             </ul>
             <ul className="grid grid-cols-2 gap-2 items-center">
-              <li className="my-2"><Link href="https://x.com/kolapowariz" target="_blank"><Image src='/x.svg' width={40} height={30} alt="Twitter logo" /></Link></li>
-              <li className="my-2"><Link href="https://linkedin.com/in/warizkolapo" target="_blank"><Image src='/linkedin.svg' width={40} height={30} alt="Twitter logo" /></Link></li>
-              <li className="my-2"><Link href="https://github.com/kolapowariz/" target="_blank"><Image src='/github.svg' width={40} height={30} alt="Twitter logo" /></Link></li>
+              <li className="my-2"><Link href="https://x.com/kolapowariz" target="_blank"><Image src='/x.svg' width={40} height={30} alt="Twitter logo" className="h-auto" /></Link></li>
+              <li className="my-2"><Link href="https://linkedin.com/in/warizkolapo" target="_blank"><Image src='/linkedin.svg' width={40} height={30} alt="Twitter logo" className="h-auto" /></Link></li>
+              <li className="my-2"><Link href="https://github.com/kolapowariz/" target="_blank"><Image src='/github.svg' width={40} height={30} alt="Twitter logo" className="w h-auto" /></Link></li>
             </ul>
           </div>
         </div>
@@ -73,9 +66,9 @@ export default function Home() {
             <li className='py-2'><Link href="">Resume</Link></li>
           </ul>
           <ul className="flex items-center justify-around gap-5">
-            <li className="my-2"><Link href="https://x.com/kolapowariz" target="_blank"><Image src='/x.svg' width={30} height={30} alt="Twitter logo" /></Link></li>
-            <li className="my-2"><Link href="https://linkedin.com/in/warizkolapo" target="_blank"><Image src='/linkedin.svg' width={30} height={30} alt="Twitter logo" /></Link></li>
-            <li className="my-2"><Link href="https://github.com/kolapowariz/" target="_blank"><Image src='/github.svg' width={30} height={30} alt="Twitter logo" /></Link></li>
+            <li className="my-2"><Link href="https://x.com/kolapowariz" target="_blank"><Image src='/x.svg' width={30} height={30} alt="Twitter logo" className="h-auto" /></Link></li>
+            <li className="my-2"><Link href="https://linkedin.com/in/warizkolapo" target="_blank"><Image src='/linkedin.svg' width={30} height={30} alt="Twitter logo" className="h-auto" /></Link></li>
+            <li className="my-2"><Link href="https://github.com/kolapowariz/" target="_blank"><Image src='/github.svg' width={30} height={30} alt="Twitter logo" className="h-auto" /></Link></li>
           </ul>
         </motion.nav>
       </header>
@@ -83,8 +76,8 @@ export default function Home() {
       <main className='my-4' id="about-me">
         <section id='#' className='flex flex-col lg:flex-row lg:justify-between lg:items-start'>
           <section className='order-last lg:order-first lg:w-3/5'>
-            <motion.p initial={{ x: 400 }} animate={{ x: 0 }} transition={{ duration: 2 }} className='text-2xl lg:text-3xl my-4'>Hi there! Call me Wariz,</motion.p>
-            <motion.p initial={{ x: -400 }} animate={{ x: 0 }} transition={{ duration: 2 }} className='text-3xl lg:text-4xl my-4'>FrontEnd developer.</motion.p>
+            <p  className='text-2xl lg:text-3xl my-4'>Hi there! Call me Wariz,</p>
+            <p  className='text-3xl lg:text-4xl my-4'>FrontEnd developer.</p>
             <section id='about' className='mt-5'>
               <p className='mt-2'>I&apos;m a passionate and dedicated Frontend Developer who loves creating beautiful, dynamic user and functional web experiences. I enjoy transforming ideas into reality and thrive on solving complex problems with elegant solutions.</p>
               <p>During my teenage years, at the age of 17, I became fascinated with the world of programming and I delved into it intending to learn C# (C Sharp) programming language. Although I encountered obstacles and my progress was not as smooth as I had envisioned, this experience laid the foundation for my future endeavors. Despite encountering numerous challenges, I persisted in my pursuit.</p>
@@ -93,7 +86,7 @@ export default function Home() {
             </section>
           </section>
           <section>
-            <Image src='/warizz.jpg' width={338} height={344} alt="Kolapo Wariz" priority={true} className='block mt-6  lg:h-96 lg:w-96 mx-auto rounded-full object-cover' />
+            <Image src='/warizz.jpg' width={338} height={344} alt="Kolapo Wariz" priority={true} className='block mt-6  lg:h-96 lg:w-96 mx-auto rounded-full object-cover w-auto' />
           </section>
         </section>
 
@@ -103,23 +96,23 @@ export default function Home() {
             {projects.map((data) => {
               return (
                 <div key={data.id} className='sm:w-full flex flex-col sm:flex-row justify-center items-center my-7 mx-auto'>
-                  <div className='w-auto h-auto min-h-72 rounded-t-xl sm:rounded-none sm:w-96 sm:h-96 bg-gray-200 text-black sm:rounded-s-2xl p-5'>
+                  <div className='w-auto h-auto min-h-72 rounded-t-xl sm:rounded-none sm:w-96 sm:h-96 bg-gray-200 text-black sm:rounded-s-2xl p-4'>
                     <p>{data.title}</p>
                     <p className='mb-4'>{data.description}</p>
                     <Link href={`/${data.title}`} className='text-blue-500 border-slate-800 border rounded-lg p-2'>View Project</Link>
 
                   </div>
-                  <div className='w-full h-auto rounded-b-xl sm:rounded-none sm:w-96 sm:h-96 bg-gray-200 sm:rounded-e-2xl p-5'>
-                    <Image src={data.image} alt={data.imageAlt} width={400} height={400} className='mx-auto w-auto h-auto' />
+                  <div className='w-full h-auto rounded-b-xl sm:rounded-none sm:w-96 sm:h-96 bg-gray-200 sm:rounded-e-2xl p-4'>
+                    <Image src={data.image} alt={data.imageAlt} width={400} height={400} className='mx-auto w-full h-auto sm:h-full rounded-lg ' />
                   </div>
                 </div>
               )
             })}
           </div>
         </section>
-        <section id='contact' className='mt-10 w-4/5 lg:w-2/4 mx-auto'>
+        <section id='contact' className='mt-10 w-auto sm:w-96 mx-auto'>
           <h2 className='text-center text-4xl'>Contact</h2>
-          <form action="" className="mt-7">
+          <form action="" className="mt-7 text-black">
             <input type="text" placeholder='Name' className='w-full p-2 my-2 rounded-md' />
             <input type="email" placeholder='Email' className='w-full p-2 my-2 rounded-md' />
             <textarea name="" id="" placeholder='Message' className='w-full p-2 my-2 rounded-md'></textarea>
@@ -134,3 +127,4 @@ export default function Home() {
 
   );
 }
+
