@@ -7,7 +7,7 @@
     "imageAlt": "Healler Image",
     "liveUrl": "https://www.healler.com",
     "githubUrl": "https://github.com/kolapowariz/healler",
-    "technologies": ["React", "Node.js", "MongoDB"]
+    "technologies": ["Reactjs", "Node.js", "MongoDB"]
   },
   {
     "title": "WaveSort",
@@ -17,6 +17,6 @@
     "imageAlt": "Healler Image",
     "liveUrl": "https://www.chatter.com",
     "githubUrl": "https://github.com/kolapowariz/wavesort",
-    "technologies": ["React", "Node.js", "MongoDB"]
+    "technologies": ["Nextjs", "Shadcn UI", "Tailwind CSS"]
   }
 ]
