@@ -1,15 +1,5 @@
 [
   {
-    "title": "Healler",
-    "description": "It's a platform that connects people with health professionals. It is a platform that allows people to book appointments with health professionals and have video calls with them.",
-    "id": "1",
-    "image": "/nft.jpg",
-    "imageAlt": "Healler Image",
-    "liveUrl": "https://www.healler.com",
-    "githubUrl": "https://github.com/kolapowariz/healler",
-    "technologies": ["Reactjs", "Node.js", "MongoDB"]
-  },
-  {
     "title": "WaveSort",
     "description": "In this age of pictures, hashtags, Reels, TikTok, likes, and comments, a traditional bookworm’s heaven would be a blog to access more text-based content. WaveSort aims to be that heaven specifically for this kind of audience. It is a multi-functional platform for authors and readers to create and access content.",
     "id": "2",
@@ -17,7 +7,17 @@
     "imageAlt": "Healler Image",
     "liveUrl": "https://www.chatter.com",
     "githubUrl": "https://github.com/kolapowariz/wavesort",
-    "technologies": ["Nextjs", "Shadcn UI", "Tailwind CSS"]
+    "technologies": ["Nextjs", "Shadcn UI", "Tailwind CSS", "TypeScript", "Vercel Postgres","NextAuth"]
+  },
+  {
+    "title": "Healler",
+    "description": "It's a platform that connects people with health professionals. It is a platform that allows people to book appointments with health professionals and have video calls with them.",
+    "id": "1",
+    "image": "/nft.jpg",
+    "imageAlt": "Healler Image",
+    "liveUrl": "https://healler.vercel.app/",
+    "githubUrl": "https://github.com/kolapowariz/healler",
+    "technologies": ["Reactjs", "Node.js", "MongoDB"]
   },
   {
     "title": "FetchRepoApp",
@@ -25,9 +25,9 @@
     "id": "3",
     "image": "/repoVue.png",
     "imageAlt": "FetchRepo Image",
-    "liveUrl": "https://www.chatter.com",
-    "githubUrl": "https://github.com/kolapowariz/wavesort",
-    "technologies": ["Nextjs", "Shadcn UI", "Tailwind CSS"]
+    "liveUrl": "https://fetchrepowithvue.vercel.app/",
+    "githubUrl": "https://github.com/kolapowariz/fetchRepoWithVue",
+    "technologies": ["Vuejs","JavaScript", "CSS", "HTML"]
   },
   {
     "title": "Repositories-App",
@@ -35,8 +35,8 @@
     "id": "4",
     "image": "/repoReact.png",
     "imageAlt": "Repository Image",
-    "liveUrl": "https://www.chatter.com",
-    "githubUrl": "https://github.com/kolapowariz/wavesort",
-    "technologies": ["Nextjs", "Shadcn UI", "Tailwind CSS"]
+    "liveUrl": "https://alt-second-semester-exam-chi.vercel.app/",
+    "githubUrl": "https://github.com/kolapowariz/FetchRepoWithReact",
+    "technologies": ["Reactjs","JavaScript","CSS", "HTML"]
   }
 ]

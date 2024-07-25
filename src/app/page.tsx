@@ -97,7 +97,7 @@ export default function Home() {
               return (
                 <div key={data.id} className='sm:w-full flex flex-col sm:flex-row justify-center items-center my-7 mx-auto'>
                   <div className='w-auto h-auto min-h-72 rounded-t-xl sm:rounded-none sm:w-96 sm:h-96 bg-gray-200 text-black sm:rounded-s-2xl p-4'>
-                    <p>{data.title}</p>
+                    <h1 className="text-center text-2xl mb-2">{data.title}</h1>
                     <p className='mb-4'>{data.description}</p>
                     <Link href={`/${data.title}`} className='text-blue-500 border-slate-800 border rounded-lg p-2'>View Project</Link>
 

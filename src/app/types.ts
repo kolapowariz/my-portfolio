@@ -7,7 +7,7 @@
   
 };
 
-export type DetailsType = {
+export type DetailsType = ProjectType & {
   liveUrl: string;
   githubUrl: string;
   technologies: string[];
