@@ -96,14 +96,14 @@ export default function Home() {
             {projects.map((data) => {
               return (
                 <div key={data.id} className='sm:w-full flex flex-col sm:flex-row justify-center items-center my-7 mx-auto'>
-                  <div className='w-auto h-auto min-h-72 rounded-t-xl sm:rounded-none sm:w-96 sm:h-96 bg-gray-200 text-black sm:rounded-s-2xl p-4'>
+                  <div className='w-auto h-auto rounded-t-xl sm:rounded-none sm:w-96 sm:h-52 bg-gray-200 text-black sm:rounded-s-2xl p-4'>
                     <h1 className="text-center text-2xl mb-2">{data.title}</h1>
-                    <p className='mb-4'>{data.description}</p>
+                    <p className='mb-4'>{data.littleDesc}</p>
                     <Link href={`/${data.title}`} className='text-blue-500 border-slate-800 border rounded-lg p-2'>View Project</Link>
 
                   </div>
-                  <div className='w-full h-auto rounded-b-xl sm:rounded-none sm:w-96 sm:h-96 bg-gray-200 sm:rounded-e-2xl p-4'>
-                    <Image src={data.image} alt={data.imageAlt} width={400} height={400} className='mx-auto w-full h-auto sm:h-full rounded-lg ' />
+                  <div className='w-full h-auto rounded-b-xl sm:rounded-none sm:w-96 sm:h-52 bg-gray-200 sm:rounded-e-2xl p-4'>
+                    <Image src={data.image} alt={data.imageAlt} width={400} height={400} className='mx-auto w-full h-auto rounded-lg ' />
                   </div>
                 </div>
               )
