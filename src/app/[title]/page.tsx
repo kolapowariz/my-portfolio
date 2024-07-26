@@ -31,7 +31,7 @@ export default function Project() {
   if (!project) return <CardsSkeleton />;
 
   return (
-    <div className='m-4 text-gray-200 'w-full mx-auto lg:w-[95%] lg:mx-auto bg-[#09233c] p-5 lg:m-5 text-gray-200'>
+    <div className='m-4 w-full mx-auto lg:w-[95%] lg:mx-auto bg-[#09233c] p-5 lg:m-5 text-gray-200'>
       <p className='text-4xl font-extrabold text-center mb-2'>{project.title}</p>
       <p className='mb-2'>{project.description}</p>
       <Image src={project.image} alt={project.imageAlt} width={1920} height={958} className='mb-2 w-full h-auto rounded-lg sm:w-[60rem] sm:h-[40rem] mx-auto' />
