@@ -5,14 +5,12 @@ const shimmer =
 export function CardSkeleton() {
   return (
     <div
-      className={`${shimmer} relative overflow-hidden rounded-xl bg-gray-100 p-4 shadow-sm`}
+      className={`${shimmer} relative overflow-hidden rounded-xl bg-[#103c64] sm:w-[40rem] sm:h-[30rem] mx-auto p-4 shadow-sm`}
     >
       <div className="flex p-4">
-        <div className="h-5 w-5 rounded-md bg-gray-200" />
-        <div className="ml-2 h-6 w-16 rounded-md bg-gray-200 text-sm font-medium" />
+        <div className="ml-2 h-6 w-16 rounded-md bg-[#09233c] text-sm font-medium" />
       </div>
-      <div className="flex items-center justify-center truncate rounded-xl bg-white px-4 py-8">
-        <div className="h-7 w-20 rounded-md bg-gray-200" />
+      <div className="flex items-center justify-center truncate rounded-xl bg-[#1d6db8] px-4 py-8">
       </div>
     </div>
   );
@@ -21,11 +19,20 @@ export function CardSkeleton() {
 export function CardsSkeleton() {
   return (
     <>
-    <div className="">
+      <div className="">
 
-      <CardSkeleton />
-      <CardSkeleton />
-    </div>
+        <div className="my-6">
+          <CardSkeleton />
+        </div>
+        <div className="my-8">
+
+        <CardSkeleton />
+        </div>
+        <div className="my-6">
+
+        <CardSkeleton />
+        </div>
+      </div>
     </>
   );
 }
@@ -34,14 +41,14 @@ export function CardsSkeleton() {
 export default function DashboardSkeleton() {
   return (
     <>
-      
+
       <div className="mx-auto mt-6 grid gap-10 xl:grid-cols-2 sm:w-[48rem] lg:w-[50rem] xl:w-[98rem] xl:h-[28rem] ">
         <CardSkeleton />
         <CardSkeleton />
         <CardSkeleton />
         <CardSkeleton />
       </div>
-   
+
     </>
   );
 }
