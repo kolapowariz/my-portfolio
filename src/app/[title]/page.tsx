@@ -1,10 +1,11 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { Suspense, useEffect, useState } from 'react';
 import { useParams } from 'next/navigation';
 import Image from 'next/image';
 import { DetailsType } from '@/app/types';
 import Link from 'next/link';
+import DashboardSkeleton, { CardsSkeleton } from "@/app/ui/skeletons";
 
 
 export default function Project() {
@@ -27,23 +28,23 @@ export default function Project() {
     }
   }, [title]);
 
-  if (!project) return <h1>Loading...</h1>;
+  if (!project) return <CardsSkeleton />;
 
   return (
-    <div className='m-4'>
+    <div className='m-4 text-gray-200 'w-full mx-auto lg:w-[95%] lg:mx-auto bg-[#09233c] p-5 lg:m-5 text-gray-200'>
       <p className='text-4xl font-extrabold text-center mb-2'>{project.title}</p>
       <p className='mb-2'>{project.description}</p>
       <Image src={project.image} alt={project.imageAlt} width={1920} height={958} className='mb-2 w-full h-auto rounded-lg sm:w-[60rem] sm:h-[40rem] mx-auto' />
-      <ul className='grid grid-cols-2'>
+      <h3 className='text-2xl text-center p-2 my-4'>Technologies</h3>
+      <ul className='grid grid-cols-2 gap-4 p-2 sm:w-[35rem] mx-auto'>
         {project.technologies.map((tech) => (
-          <li key={crypto.randomUUID()} className='bg-white mb-2 p-2 border rounded-md'>{tech}</li>
+          <li key={crypto.randomUUID()} className='bg-[#4c6d8b] rounded-lg p-2 text-center'>{tech}</li>
         ))}
       </ul>
-      <section className='flex justify-between'>
-
-      <Link href={project.liveUrl} target='_blank' rel='noreferrer' className=''>LiveUrl</Link>
-      <Link href={project.githubUrl} target='_blank' rel='noreferrer'>GithubUrl</Link>
-      <Link href='/'>Back to Home</Link>
+      <section className='flex justify-around mt-4 w-full sm:w-[35rem] mx-auto'>
+        <Link href={project.liveUrl} target='_blank' rel='noreferrer' className='p-2 rounded-md bg-[#4c6d8b]'>Live Url</Link>
+        <Link href={project.githubUrl} target='_blank' rel='noreferrer' className='p-2 rounded-md bg-[#4c6d8b]'>Github Url</Link>
+        <Link href='/' className='p-2 rounded-md bg-[#4c6d8b]'>Home</Link>
       </section>
     </div>
   );

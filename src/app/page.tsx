@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import { motion } from 'framer-motion'
 import { ProjectType } from "@/app/types";
+import DashboardSkeleton from "./ui/skeletons";
 
 export default function Home() {
   const [click, setClick] = useState(false);
@@ -22,7 +23,6 @@ export default function Home() {
   const toggle = () => {
     setClick(prev => !prev)
   }
-
 
   return (
     <div className='w-full mx-auto lg:w-[95%] lg:mx-auto bg-[#09233c] p-5 lg:m-5 text-gray-200'>
@@ -76,8 +76,8 @@ export default function Home() {
       <main className='my-4' id="about-me">
         <section id='#' className='flex flex-col lg:flex-row lg:justify-between lg:items-start'>
           <section className='order-last lg:order-first lg:w-3/5'>
-            <p  className='text-2xl lg:text-3xl my-4'>Hi there! Call me Wariz,</p>
-            <p  className='text-3xl lg:text-4xl my-4'>FrontEnd developer.</p>
+            <p className='text-2xl lg:text-3xl my-4'>Hi there! Call me Wariz,</p>
+            <p className='text-3xl lg:text-4xl my-4'>FrontEnd developer.</p>
             <section id='about' className='mt-5'>
               <p className='mt-2'>I&apos;m a passionate and dedicated Frontend Developer who loves creating beautiful, dynamic user and functional web experiences. I enjoy transforming ideas into reality and thrive on solving complex problems with elegant solutions.</p>
               <p>During my teenage years, at the age of 17, I became fascinated with the world of programming and I delved into it intending to learn C# (C Sharp) programming language. Although I encountered obstacles and my progress was not as smooth as I had envisioned, this experience laid the foundation for my future endeavors. Despite encountering numerous challenges, I persisted in my pursuit.</p>
@@ -93,10 +93,13 @@ export default function Home() {
         <section id="projects">
           <h2 className='text-center text-4xl mt-10'>Projects</h2>
           <div className='xl:grid lg:grid-cols-2 lg:gap-4'>
+            <>
+              {projects.length === 0 && <DashboardSkeleton />}
+            </>
             {projects.map((data) => {
               return (
                 <div key={data.id} className='sm:w-full flex flex-col sm:flex-row justify-center items-center my-7 mx-auto'>
-                  <div className='w-auto h-auto rounded-t-xl sm:rounded-none sm:w-96 sm:h-52 bg-gray-200 text-black sm:rounded-s-2xl p-4'>
+                  <div className='w-full h-auto rounded-t-xl sm:rounded-none sm:w-96 sm:h-52 bg-gray-200 text-black sm:rounded-s-2xl p-4'>
                     <h1 className="text-center text-2xl mb-2">{data.title}</h1>
                     <p className='mb-4'>{data.littleDesc}</p>
                     <Link href={`/${data.title}`} className='text-blue-500 border-slate-800 border rounded-lg p-2'>View Project</Link>
