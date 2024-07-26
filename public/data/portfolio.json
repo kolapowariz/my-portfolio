@@ -4,11 +4,12 @@
     "littleDesc": "A web application for authors and readers to create and access content.",
     "description": "In this age of pictures, hashtags, Reels, TikTok, likes, and comments, a traditional bookworm’s heaven would be a blog to access more text-based content. WaveSort aims to be that heaven specifically for this kind of audience. It is a multi-functional platform for authors and readers to create and access content.",
     "id": "2",
-    "image": "/repoVuee.png",
+    "image": "/wavesort.png",
     "imageAlt": "Healler Image",
-    "liveUrl": "https://www.chatter.com",
+    "liveUrl": "https://wavesort.vercel.app/",
     "githubUrl": "https://github.com/kolapowariz/wavesort",
-    "technologies": ["Nextjs", "Shadcn UI", "Tailwind CSS", "TypeScript", "Vercel Postgres","NextAuth"]
+    "technologies": ["Nextjs", "Shadcn UI", "Tailwind CSS", "TypeScript", "Vercel Postgres","NextAuth"],
+    "done": "Coming Soon"
   },
   {
     "title": "Healler",
@@ -19,7 +20,8 @@
     "imageAlt": "Healler Image",
     "liveUrl": "https://healler.vercel.app/",
     "githubUrl": "https://github.com/kolapowariz/healler",
-    "technologies": ["Reactjs", "Node.js", "MongoDB"]
+    "technologies": ["Reactjs", "Node.js", "MongoDB"],
+    "done": "Coming Soon"
   },
   {
     "title": "FetchRepoApp",

@@ -46,6 +46,7 @@ export default function Project() {
         <Link href={project.githubUrl} target='_blank' rel='noreferrer' className='p-2 rounded-md bg-[#4c6d8b]'>Github Url</Link>
         <Link href='/' className='p-2 rounded-md bg-[#4c6d8b]'>Home</Link>
       </section>
+      <p className='text-7xl text-center my-10'>{project.done}</p>
     </div>
   );
 }

@@ -45,7 +45,7 @@ export default function Home() {
               <li className='py-2'><Link href="#about-me">About Me</Link></li>
               <li className='py-2'><Link href="#projects">Projects</Link></li>
               <li className='py-2'><Link href="#contact">Contact</Link></li>
-              <li className='py-2'><Link href="">Resume</Link></li>
+              <li className='py-2'><Link href="https://folll.io/warizkolapo/resume/" target="_blank">Resume</Link></li>
             </ul>
             <ul className="grid grid-cols-2 gap-2 items-center">
               <li className="my-2"><Link href="https://x.com/kolapowariz" target="_blank"><Image src='/x.svg' width={40} height={30} alt="Twitter logo" className="h-auto" /></Link></li>
@@ -63,7 +63,7 @@ export default function Home() {
             <li className='py-2'><Link href="#about-me">About Me</Link></li>
             <li className='py-2'><Link href="#projects">Projects</Link></li>
             <li className='py-2'><Link href="#contact">Contact</Link></li>
-            <li className='py-2'><Link href="">Resume</Link></li>
+            <li className='py-2'><Link href="https://folll.io/warizkolapo/resume/" target="_blank">Resume</Link></li>
           </ul>
           <ul className="flex items-center justify-around gap-5">
             <li className="my-2"><Link href="https://x.com/kolapowariz" target="_blank"><Image src='/x.svg' width={30} height={30} alt="Twitter logo" className="h-auto" /></Link></li>
