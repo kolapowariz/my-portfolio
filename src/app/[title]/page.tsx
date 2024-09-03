@@ -5,7 +5,7 @@ import { useParams } from 'next/navigation';
 import Image from 'next/image';
 import { DetailsType } from '@/app/types';
 import Link from 'next/link';
-import DashboardSkeleton, { CardsSkeleton } from "@/app/ui/skeletons";
+import { SingleProject } from '@/components/skeleton';
 
 
 export default function Project() {
@@ -28,7 +28,7 @@ export default function Project() {
     }
   }, [title]);
 
-  if (!project) return <CardsSkeleton />;
+  if (!project) return <SingleProject />;
 
   return (
     <div className='m-4 w-full mx-auto lg:w-[95%] lg:mx-auto bg-[#09233c] p-5 lg:m-5 text-gray-200'>

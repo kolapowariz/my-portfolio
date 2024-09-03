@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import { motion } from 'framer-motion'
 import { ProjectType } from "@/app/types";
-import DashboardSkeleton from "../app/ui/skeletons";
+import { ProjectSkeleton } from "./skeleton";
 
 export default function Projects() {
   const [projects, setProjects] = useState<ProjectType[]>([]);
@@ -22,7 +22,7 @@ export default function Projects() {
           <h2 className='text-center text-4xl mt-10'>Projects</h2>
           <div className='xl:grid lg:grid-cols-2 lg:gap-4'>
             <>
-              {projects.length === 0 && <DashboardSkeleton />}
+              {projects.length === 0 && <ProjectSkeleton />}
             </>
             {projects.map((data) => {
               return (
