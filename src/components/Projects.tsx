@@ -6,17 +6,25 @@ import { motion } from 'framer-motion'
 import { ProjectType } from "@/app/types";
 import { ProjectSkeleton } from "./skeleton";
 
+async function getProjects() {
+  const res = await fetch('/data/portfolio.json')
+  const data = await res.json()
+  return data
+}
+
 export default function Projects() {
   const [projects, setProjects] = useState<ProjectType[]>([]);
-  useEffect(() => {
-    fetch('/data/portfolio.json')
-      .then(res => res.json())
-      .then(data => setProjects(data))
-      .catch((error) => {
-        console.error('Error fetching the portfolio data:', error);
-        setProjects([]);
-      });
-  }, []);
+  // useEffect(() => {
+  //   fetch('/data/portfolio.json')
+  //     .then(res => res.json())
+  //     .then(data => setProjects(data))
+  //     .catch((error) => {
+  //       console.error('Error fetching the portfolio data:', error);
+  //       setProjects([]);
+  //     });
+  // }, []);
+
+
   return (
     <section id="projects">
           <h2 className='text-center text-4xl mt-10'>Projects</h2>
