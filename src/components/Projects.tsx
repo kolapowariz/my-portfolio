@@ -6,11 +6,11 @@ import { motion } from 'framer-motion'
 import { ProjectType } from "@/app/types";
 import { ProjectSkeleton } from "./skeleton";
 
-async function getProjects() {
-  const res = await fetch('/data/portfolio.json')
-  const data = await res.json()
-  return data
-}
+// async function getProjects() {
+//   const res = await fetch('/data/portfolio.json')
+//   const data = await res.json()
+//   return data
+// }
 
 export default function Projects() {
   const [projects, setProjects] = useState<ProjectType[]>([]);

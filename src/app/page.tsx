@@ -13,7 +13,7 @@ export default function Home() {
   }
 
   return (
-    <div className='w-full mx-auto lg:w-[95%] lg:mx-auto bg-[#09233c] p-5 lg:m-5 text-gray-200'>
+    <div className='w-full mx-auto lg:mx-auto bg-[#09233c] p-5 lg:m-5 text-gray-200'>
       <header className='md:hidden flex justify-between items-center mt-4 mx-auto py-5 px-3 w-full bg-[#2a455e] shadow-2xl rounded-md'>
         <motion.h1 initial={{ x: -200 }} animate={{ x: 0 }} transition={{ duration: 2 }} className='text-md'>Kolapo Wariz</motion.h1>
         <nav className='flex flex-col justify-center items-end'>
