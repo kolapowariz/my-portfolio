@@ -14,15 +14,15 @@ import { ProjectSkeleton } from "./skeleton";
 
 export default function Projects() {
   const [projects, setProjects] = useState<ProjectType[]>([]);
-  // useEffect(() => {
-  //   fetch('/data/portfolio.json')
-  //     .then(res => res.json())
-  //     .then(data => setProjects(data))
-  //     .catch((error) => {
-  //       console.error('Error fetching the portfolio data:', error);
-  //       setProjects([]);
-  //     });
-  // }, []);
+  useEffect(() => {
+    fetch('/data/portfolio.json')
+      .then(res => res.json())
+      .then(data => setProjects(data))
+      .catch((error) => {
+        console.error('Error fetching the portfolio data:', error);
+        setProjects([]);
+      });
+  }, []);
 
 
   return (
