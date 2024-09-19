@@ -20,7 +20,7 @@
     "imageAlt": "Healler Image",
     "liveUrl": "https://healler.vercel.app/",
     "githubUrl": "https://github.com/kolapowariz/healler",
-    "technologies": ["Reactjs", "Node.js", "MongoDB"],
+    "technologies": ["MongoDB", "Express", "Reactjs", "Nodejs", "Tailwind CSS", "TypeScript"],
     "done": "Coming Soon"
   },
   {

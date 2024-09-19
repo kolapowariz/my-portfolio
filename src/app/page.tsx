@@ -33,6 +33,7 @@ export default function Home() {
               <li className='py-2'><Link href="#about-me">About Me</Link></li>
               <li className='py-2'><Link href="#projects">Projects</Link></li>
               <li className='py-2'><Link href="#contact">Contact</Link></li>
+              <li className='py-2'><Link href="#skills">Skills</Link></li>
               <li className='py-2'><Link href="https://folll.io/warizkolapo/resume/" target="_blank">Resume</Link></li>
             </ul>
             <ul className="grid grid-cols-2 gap-2 items-center">
@@ -51,6 +52,7 @@ export default function Home() {
             <li className='py-2'><Link href="#about-me">About Me</Link></li>
             <li className='py-2'><Link href="#projects">Projects</Link></li>
             <li className='py-2'><Link href="#contact">Contact</Link></li>
+            <li className='py-2'><Link href="#skills">Skills</Link></li>
             <li className='py-2'><Link href="https://folll.io/warizkolapo/resume/" target="_blank">Resume</Link></li>
           </ul>
           <ul className="flex items-center justify-around gap-5">
@@ -76,6 +78,10 @@ export default function Home() {
           <section>
             <Image src='/warizz.jpg' width={338} height={344} alt="Kolapo Wariz" priority={true} className='block mt-6  lg:h-96 lg:w-96 mx-auto rounded-full object-cover w-auto' />
           </section>
+        </section>
+
+        <section id="skills" className='mt-10 w-auto sm:w-96 mx-auto'>
+          <h2 className='text-center text-4xl'>Skills</h2>
         </section>
 
         <Projects />
