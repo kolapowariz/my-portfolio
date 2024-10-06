@@ -46,7 +46,7 @@ export default function Home() {
         </div>
       </main>
 
-      <header className='hidden font-mono md:flex justify-between items-center bg-[#2a455e] shadow-2xl rounded-md px-3 text-lg fixed w-[90%] mx-auto'>
+      <header className='hidden font-mono md:flex justify-between items-center bg-[#2a455e] shadow-2xl rounded-md px-3 text-lg mx-auto'>
         <motion.h1 initial={{ x: -200 }} animate={{ x: 0 }} transition={{ duration: 2 }} className='text-md'>Kolapo Wariz</motion.h1>
         <motion.nav initial={{ x: 1000 }} animate={{ x: 0 }} transition={{ duration: 2 }} className="flex justify-between items-center">
           <ul className='flex justify-between mx-4 text-md gap-10'>
@@ -63,7 +63,7 @@ export default function Home() {
         </motion.nav>
       </header>
 
-      <main className='my-4 mt-20' id="about-me">
+      <main className='my-4' id="about-me">
         <section id='#' className='flex flex-col lg:flex-row lg:justify-between lg:items-start'>
           <section className='order-last lg:order-first lg:w-3/5'>
             <p className='text-2xl lg:text-3xl my-4 font-mono'>Hi there! Call me Wariz,</p>
