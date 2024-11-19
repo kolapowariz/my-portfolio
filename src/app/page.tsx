@@ -1,11 +1,14 @@
 'use client';
-import Image from "next/image";
-import { Suspense, useState } from "react";
-import Link from "next/link";
-import { motion } from 'framer-motion'
-import Projects from "@/components/project";
-import Skills from "@/components/skills";
+import About from "@/components/About";
+import Blog from "@/components/Blog";
 import Contact from "@/components/contact";
+import Projects from "@/components/project";
+import { Button } from "@/components/ui/button";
+import { FileIcon } from "@radix-ui/react-icons";
+import { motion } from 'framer-motion';
+import Image from "next/image";
+import Link from "next/link";
+import { Suspense, useState } from "react";
 
 export default function Home() {
   const [click, setClick] = useState(false);
@@ -32,10 +35,11 @@ export default function Home() {
         <div className={click ? '' : 'hidden'}>
           <div className="flex p-4 justify-between items-center">
             <ul className='py-2 text-center text-lg'>
-              <li className='py-1'><Link href="#about-me">About Me</Link></li>
+              <li className='py-1'><Link href="#home">Home</Link></li>
               <li className='py-1'><Link href="#projects">Projects</Link></li>
+              <li className='py-1'><Link href="#about">About</Link></li>
+              <li className='py-1'><Link href="#blog">Blog</Link></li>
               <li className='py-1'><Link href="#contact">Contact</Link></li>
-              <li className='py-1'><Link href="https://folll.io/warizkolapo/resume/" target="_blank">Resume</Link></li>
             </ul>
             <ul className="grid grid-cols-2 gap-2 items-center">
               <li className="my-2"><Link href="https://x.com/kolapowariz" target="_blank"><Image src='/x.svg' width={40} height={30} alt="Twitter logo" className="h-auto" /></Link></li>
@@ -50,10 +54,11 @@ export default function Home() {
         <motion.h1 initial={{ x: -200 }} animate={{ x: 0 }} transition={{ duration: 2 }} className='text-md'>Kolapo Wariz</motion.h1>
         <motion.nav initial={{ x: 1000 }} animate={{ x: 0 }} transition={{ duration: 2 }} className="flex justify-between items-center">
           <ul className='flex justify-between mx-4 text-md gap-10'>
-            <li className='py-2'><Link href="#about-me">About Me</Link></li>
+            <li className='py-2'><Link href="#">Home</Link></li>
             <li className='py-2'><Link href="#projects">Projects</Link></li>
+            <li className='py-2'><Link href="#about">About</Link></li>
+            <li className='py-2'><Link href="#blog">Blog</Link></li>
             <li className='py-2'><Link href="#contact">Contact</Link></li>
-            <li className='py-2'><Link href="https://folll.io/warizkolapo/resume/" target="_blank">Resume</Link></li>
           </ul>
           <ul className="flex items-center justify-around gap-5">
             <li className="my-2"><Link href="https://x.com/kolapowariz" target="_blank"><Image src='/x.svg' width={30} height={30} alt="Twitter logo" className="h-auto" /></Link></li>
@@ -63,18 +68,17 @@ export default function Home() {
         </motion.nav>
       </header>
 
-      <main className='my-4' id="about-me">
-        <section id='#' className='flex flex-col lg:flex-row lg:justify-between lg:items-start'>
+      <main className='my-4' id="">
+        <section id='#' className='flex flex-col lg:flex-row lg:justify-between lg:items-start '>
           <section className='order-last lg:order-first lg:w-3/5'>
             <p className='text-2xl lg:text-3xl my-4 font-mono'>Hi there! Call me Wariz,</p>
             <p className='text-3xl lg:text-4xl my-4 font-mono'>FrontEnd developer.</p>
-            <section id='about' className='mt-5 text-xl'>
-              <p className='mt-2'>I&apos;m a passionate and dedicated Frontend Developer who loves creating beautiful, dynamic user and functional web experiences. I enjoy transforming ideas into reality and thrive on solving complex problems with elegant solutions.</p>
-              <p>During my teenage years, at the age of 17, I became fascinated with the world of programming and I delved into it intending to learn C# (C Sharp) programming language. Although I encountered obstacles and my progress was not as smooth as I had envisioned, this experience laid the foundation for my future endeavors. Despite encountering numerous challenges, I persisted in my pursuit.</p>
-              <p>However, my journey took an unexpected turn when I stumbled upon JavaScript, a language that ignited a deep-seated passion within me. From that point on, My path was crystal clear - I was meant to pursue a career in web development.</p>
-              <p>This newfound passion has been the driving force behind my relentless quest for self-improvement, pushing me to continually refine my skills, keep abreast of the latest industry trends, and adhere to best practices in the field.</p>
-              <Skills />
-            </section>
+            <p className='text-2xl mt-2'>A dedicated frontend engineer skilled in React.js, Vue.js, Next.js, and TypeScript, specializing in building performant and responsive web applications. Experienced in Agile development environments, delivering optimized user interfaces, and passionate about learning and solving real-world problems through technology.
+            </p>
+            <Button className="mt-10 text-2xl p-5 rounded-full border-green-800">
+              <Link href="https://docs.google.com/document/d/1Lf6ukPeWWRcqi24p0rn57IZhfPZTudn4dbvIIwu8u6A/edit?usp=sharing" target="_blank">View Resume</Link>
+              <FileIcon width={20} height={20} className="ml-2" />
+            </Button>
           </section>
           <section>
             <Image src='/warizz.jpg' width={338} height={344} alt="Kolapo Wariz" priority={true} className='block mt-6  lg:h-96 lg:w-96 mx-auto rounded-full object-cover w-auto' />
@@ -83,7 +87,9 @@ export default function Home() {
         <Suspense fallback='Loading...'>
           <Projects />
         </Suspense>
-        <Contact/>
+        <About />
+        <Blog />
+        <Contact />
 
       </main>
       <footer>
