@@ -18,8 +18,8 @@ export default function Home() {
   }
 
   return (
-    <div className='w-full mx-auto lg:mx-auto bg-[#09233c] p-3 lg:px-20 lg:py-5 text-gray-200 font-mono'>
-      <header className='md:hidden flex justify-between items-center mt-4 mx-auto py-5 px-3 w-full bg-[#2a455e] shadow-2xl rounded-md'>
+    <div className='w-[90%] mx-auto bg-[#09233c] text-gray-200 font-mono'>
+      <header className='md:hidden flex justify-between items-center mt-1 mx-auto py-5 px-3 w-[90%] bg-[#2a455e] shadow-2xl rounded-md fixed'>
         <motion.h1 initial={{ x: -200 }} animate={{ x: 0 }} transition={{ duration: 2 }} className='text-lg'>Kolapo Wariz</motion.h1>
         <nav className='flex flex-col justify-center items-end'>
           <button onClick={toggle}>{click ? <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-8">
@@ -31,11 +31,11 @@ export default function Home() {
           }</button>
         </nav>
       </header>
-      <main className='md:hidden bg-[#2a455e] mt-2 rounded-md'>
+      <main className='md:hidden bg-[#2a455e] mt-20 rounded-md fixed w-[90%]'>
         <div className={click ? '' : 'hidden'}>
           <div className="flex p-4 justify-between items-center">
             <ul className='py-2 text-center text-lg'>
-              <li className='py-1'><Link href="#home">Home</Link></li>
+              <li className='py-1'><Link href="#">Home</Link></li>
               <li className='py-1'><Link href="#projects">Projects</Link></li>
               <li className='py-1'><Link href="#about">About</Link></li>
               <li className='py-1'><Link href="#blog">Blog</Link></li>
@@ -50,10 +50,10 @@ export default function Home() {
         </div>
       </main>
 
-      <header className='hidden font-mono md:flex justify-between items-center bg-[#2a455e] shadow-2xl rounded-md px-3 text-lg mx-auto'>
+      <header className='hidden font-mono md:flex justify-between items-center bg-[#2a455e] shadow-2xl rounded-md text-lg px-2 fixed mx-auto mt-1 w-[90%]'>
         <motion.h1 initial={{ x: -200 }} animate={{ x: 0 }} transition={{ duration: 2 }} className='text-md'>Kolapo Wariz</motion.h1>
-        <motion.nav initial={{ x: 1000 }} animate={{ x: 0 }} transition={{ duration: 2 }} className="flex justify-between items-center">
-          <ul className='flex justify-between mx-4 text-md gap-10'>
+        <motion.nav initial={{ x: 1000 }} animate={{ x: 0 }} transition={{ duration: 2 }} className="flex justify-between items-center gap-5">
+          <ul className='flex justify-between text-md gap-10'>
             <li className='py-2'><Link href="#">Home</Link></li>
             <li className='py-2'><Link href="#projects">Projects</Link></li>
             <li className='py-2'><Link href="#about">About</Link></li>
@@ -68,8 +68,8 @@ export default function Home() {
         </motion.nav>
       </header>
 
-      <main className='my-4' id="">
-        <section id='#' className='flex flex-col lg:flex-row lg:justify-between lg:items-start '>
+      <main className='' id="">
+        <section id='#' className='flex flex-col lg:flex-row lg:justify-between lg:items-start pt-20 md:pt-15'>
           <section className='order-last lg:order-first lg:w-3/5'>
             <p className='text-2xl lg:text-3xl my-4 font-mono'>Hi there! Call me Wariz,</p>
             <p className='text-3xl lg:text-4xl my-4 font-mono'>FrontEnd developer.</p>
@@ -77,6 +77,10 @@ export default function Home() {
             </p>
             <Button className="mt-10 text-2xl p-5 rounded-full border-green-800">
               <Link href="https://docs.google.com/document/d/1Lf6ukPeWWRcqi24p0rn57IZhfPZTudn4dbvIIwu8u6A/edit?usp=sharing" target="_blank">View Resume</Link>
+              <FileIcon width={20} height={20} className="ml-2" />
+            </Button>
+            <Button className="mt-10 text-2xl p-5 rounded-full border-green-800">
+              <Link href="/Resume.pdf" target="_blank">View Resume</Link>
               <FileIcon width={20} height={20} className="ml-2" />
             </Button>
           </section>
@@ -93,7 +97,8 @@ export default function Home() {
 
       </main>
       <footer>
-        <p className='text-center text-lg my-4'>Kolapo Wariz &copy; 2024</p>
+        <p className='text-center text-lg my-4'>Designed and built by Kolapo Wariz.</p>
+        <p className='text-center text-lg my-4'>&copy; 2024</p>
       </footer>
     </div>
 

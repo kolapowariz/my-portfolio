@@ -33,6 +33,10 @@ body {
 } */
 
 
+html {
+  scroll-behavior: smooth;
+}
+
 
 :root {
   font-family: Roboto, system-ui, Avenir, Helvetica, Arial, sans-serif;
@@ -49,10 +53,12 @@ body {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  /* scroll-behavior: smooth; */
 }
 
 body{
   background: #09233c;
+  /* scroll-behavior: smooth; */
   /* font-family: cursive; */
 }
 
