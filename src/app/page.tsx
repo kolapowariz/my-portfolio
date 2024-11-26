@@ -79,10 +79,10 @@ export default function Home() {
               <Link href="https://docs.google.com/document/d/1Lf6ukPeWWRcqi24p0rn57IZhfPZTudn4dbvIIwu8u6A/edit?usp=sharing" target="_blank">View Resume</Link>
               <FileIcon width={20} height={20} className="ml-2" />
             </Button>
-            <Button className="mt-10 text-2xl p-5 rounded-full border-green-800">
+            {/* <Button className="mt-10 text-2xl p-5 rounded-full border-green-800">
               <Link href="/Resume.pdf" target="_blank">View Resume</Link>
               <FileIcon width={20} height={20} className="ml-2" />
-            </Button>
+            </Button> */}
           </section>
           <section>
             <Image src='/warizz.jpg' width={338} height={344} alt="Kolapo Wariz" priority={true} className='block mt-6  lg:h-96 lg:w-96 mx-auto rounded-full object-cover w-auto' />
