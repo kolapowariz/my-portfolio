@@ -34,7 +34,7 @@ const projects = [
     "imageAlt": "FetchRepo Image",
     "liveUrl": "https://fetchrepowithvue.vercel.app/",
     "githubUrl": "https://github.com/kolapowariz/fetchRepoWithVue",
-    "technologies": ["Vuejs","JavaScript", "CSS", "HTML"]
+    "technologies": ["Vuejs", "JavaScript", "CSS", "HTML"]
   },
   {
     "title": "RepositoriesApp",
@@ -45,14 +45,14 @@ const projects = [
     "imageAlt": "Repository Image",
     "liveUrl": "https://alt-second-semester-exam-chi.vercel.app/",
     "githubUrl": "https://github.com/kolapowariz/FetchRepoWithReact",
-    "technologies": ["Reactjs","JavaScript","CSS", "HTML"]
+    "technologies": ["Reactjs", "JavaScript", "CSS", "HTML"]
   }
 ]
 
 
 export default function Projects() {
   return (
-    <section id="projects">
+    <section id="projects" className="pt-10">
       <h2 className='text-center text-4xl mt-10'>Projects</h2>
       <div className='xl:grid lg:mt-6 xl:grid-cols-2 xl:gap-8'>
         {projects.map((data) => {
