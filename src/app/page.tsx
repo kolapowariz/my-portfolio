@@ -76,13 +76,16 @@ export default function Home() {
             <p className='text-2xl mt-2'>A dedicated frontend engineer skilled in React.js, Vue.js, Next.js, and TypeScript, specializing in building performant and responsive web applications. Experienced in Agile development environments, delivering optimized user interfaces, and passionate about learning and solving real-world problems through technology.
             </p>
             <Button className="mt-10 text-2xl p-5 rounded-full border-green-800">
-              <Link href="https://docs.google.com/document/d/1Lf6ukPeWWRcqi24p0rn57IZhfPZTudn4dbvIIwu8u6A/edit?usp=sharing" target="_blank">View Resume</Link>
+              <Link href="/kolapoWariz.pdf" target="_blank">View Resume</Link>
               <FileIcon width={20} height={20} className="ml-2" />
             </Button>
-            {/* <Button className="mt-10 text-2xl p-5 rounded-full border-green-800">
-              <Link href="/Resume.pdf" target="_blank">View Resume</Link>
-              <FileIcon width={20} height={20} className="ml-2" />
-            </Button> */}
+            <div className="mt-10">
+              <h1 className="text-2xl font-bold mb-4">Listen to My Resume</h1>
+              <audio controls className="w-full max-w-md">
+                <source src="/KolapoWariz-VoiceResume.wav" type="audio/wav" />
+                Your browser does not support the audio element.
+              </audio>
+            </div>
           </section>
           <section>
             <Image src='/warizz.jpg' width={338} height={344} alt="Kolapo Wariz" priority={true} className='block mt-6  lg:h-96 lg:w-96 mx-auto rounded-full object-cover w-auto' />
