@@ -38,7 +38,7 @@ export default function Home() {
               <li className='py-1'><Link href="#">Home</Link></li>
               <li className='py-1'><Link href="#projects">Projects</Link></li>
               <li className='py-1'><Link href="#about">About</Link></li>
-              <li className='py-1'><Link href="#blog">Blog</Link></li>
+              {/* <li className='py-1'><Link href="#blog">Blog</Link></li> */}
               <li className='py-1'><Link href="#contact">Contact</Link></li>
             </ul>
             <ul className="grid grid-cols-2 gap-2 items-center">
@@ -57,7 +57,7 @@ export default function Home() {
             <li className='py-2'><Link href="#">Home</Link></li>
             <li className='py-2'><Link href="#projects">Projects</Link></li>
             <li className='py-2'><Link href="#about">About</Link></li>
-            <li className='py-2'><Link href="#blog">Blog</Link></li>
+            {/* <li className='py-2'><Link href="#blog">Blog</Link></li> */}
             <li className='py-2'><Link href="#contact">Contact</Link></li>
           </ul>
           <ul className="flex items-center justify-around gap-5">
@@ -95,7 +95,7 @@ export default function Home() {
           <Projects />
         </Suspense>
         <About />
-        <Blog />
+        {/* <Blog /> */}
         <Contact />
 
       </main>

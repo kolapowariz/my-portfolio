@@ -2,10 +2,10 @@ export default function Skills() {
 
   return (
     <section id="skills" className='mt-4'>
-      <h3 className="text-3xl underline underline-offset-8">Education</h3>
+      {/* <h3 className="text-3xl underline underline-offset-8">Education</h3>
       <p className="text-xl my-5">...</p>
       <h3 className="text-3xl underline underline-offset-8">Work Experience</h3>
-      <p className="text-xl my-5">...</p>
+      <p className="text-xl my-5">...</p> */}
       <h3 className="text-3xl underline underline-offset-8">Technologies</h3>
       <p className="text-xl my-5">HTML, CSS, JavaScript, TypeScript, ReactJS, VueJS, NextJS, SQL, Supabase, PostgreSQL.</p>
       <h3 className="text-3xl underline underline-offset-8">Test</h3>
