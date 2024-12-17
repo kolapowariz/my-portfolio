@@ -2,7 +2,7 @@ import Skills from "./skills"
 
 function About() {
   return (
-    <section id='about' className='mt-5 text-xl'>
+    <section id='about' className='pt-10 text-xl'>
       <h2 className='text-center text-4xl mt-10'>About Me</h2>
       <p className='mt-2'>I&apos;m a passionate and dedicated Frontend Developer who loves creating beautiful, dynamic user and functional web experiences. I enjoy transforming ideas into reality and thrive on solving complex problems with elegant solutions.</p>
       <p>During my teenage years, at the age of 17, I became fascinated with the world of programming and I delved into it intending to learn C# (C Sharp) programming language. Although I encountered obstacles and my progress was not as smooth as I had envisioned, this experience laid the foundation for my future endeavors. Despite encountering numerous challenges, I persisted in my pursuit.</p>
