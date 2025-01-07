@@ -76,7 +76,7 @@ export default function Home() {
             <p className='text-2xl mt-2'>A dedicated frontend engineer skilled in React.js, Vue.js, Next.js, and TypeScript, specializing in building performant and responsive web applications. Experienced in Agile development environments, delivering optimized user interfaces, and passionate about learning and solving real-world problems through technology.
             </p>
             <Button className="mt-10 text-2xl p-5 rounded-full border-green-800">
-              <Link href="/KolapoWariz.pdf" target="_blank">View Resume</Link>
+              <Link href="/01KolapoWarizResume.pdf" target="_blank">View Resume</Link>
               <FileIcon width={20} height={20} className="ml-2" />
             </Button>
             <div className="mt-10">
@@ -101,7 +101,7 @@ export default function Home() {
       </main>
       <footer>
         <p className='text-center text-lg my-4'>Designed and built by Kolapo Wariz.</p>
-        <p className='text-center text-lg my-4'>&copy; 2024</p>
+        <p className='text-center text-lg my-4'>&copy; 2025</p>
       </footer>
     </div>
 
