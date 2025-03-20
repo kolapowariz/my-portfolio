@@ -52,7 +52,7 @@ const projects = [
       "Tailwind CSS",
       "TypeScript",
       "MongoDB",
-      "Auth-js",
+      "Authjs",
     ],
     done: "Coming Soon",
   },
