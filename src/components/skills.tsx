@@ -20,6 +20,11 @@ export default function Skills() {
       </p>
       <h3 className="text-3xl underline underline-offset-8">Work Experience</h3>
       <p className="text-xl my-5">
+        Fullstack Developer , GIS Analytics, United Kingdom | April 2025 –
+        Present
+      </p>
+      <p className="text-xl my-5"></p>
+      <p className="text-xl my-5">
         Frontend Developer Intern, Enextgen Wireless Limited, Nigeria | August
         2024 – October 2024
       </p>
@@ -37,7 +42,7 @@ export default function Skills() {
       </p>
       <h3 className="text-3xl underline underline-offset-8">Technologies</h3>
       <p className="text-xl my-5">
-        HTML, CSS, JavaScript, TypeScript, ReactJS, VueJS, NextJS, Supabase,
+        HTML, CSS, JavaScript, TypeScript, Python, Django, ReactJS, VueJS, NextJS, Supabase,
         PostgreSQL, MongoDB, MySQL.
       </p>
       <h3 className="text-3xl underline underline-offset-8">Test</h3>
