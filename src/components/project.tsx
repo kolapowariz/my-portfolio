@@ -2,6 +2,23 @@ import Image from "next/image";
 
 const projects = [
   {
+    title: "PodifyIt",
+    littleDesc: "AI Resume Podcast Generator from PDFs.",
+    id: "2",
+    image: "/podifyit.png",
+    imageAlt: "PodifyIt Image",
+    liveUrl: "https://podifyit.vercel.app/",
+    githubUrl: "https://github.com/kolapowariz/podifyit",
+    technologies: [
+      "Nextjs",
+      "FastAPI",
+      "Shadcn UI",
+      "Tailwind CSS",
+      "TypeScript",
+      "pdfjs-dist",
+    ],
+  },
+  {
     title: "wavvySort",
     littleDesc:
       "A web application for authors and readers to create and access content.",
@@ -18,25 +35,6 @@ const projects = [
       "Supabase",
       "React Markdown",
     ],
-    done: "Coming Soon",
-  },
-  {
-    title: "PodifyIt",
-    littleDesc: "A web app for creating AI-generated podcasts.",
-    id: "2",
-    image: "/podifyit.png",
-    imageAlt: "PodifyIt Image",
-    liveUrl: "https://podifyit.vercel.app/",
-    githubUrl: "https://github.com/kolapowariz/podifyit",
-    technologies: [
-      "Nextjs",
-      "Shadcn UI",
-      "Tailwind CSS",
-      "TypeScript",
-      "Supabase",
-      "pdfjs-dist",
-    ],
-    done: "Coming Soon",
   },
   {
     title: "RaderCoin",
@@ -54,7 +52,6 @@ const projects = [
       "MongoDB",
       "Authjs",
     ],
-    done: "Coming Soon",
   },
   {
     title: "Healler",
@@ -72,43 +69,42 @@ const projects = [
       "Tailwind CSS",
       "TypeScript",
     ],
-    done: "Coming Soon",
   },
-  {
-    title: "FetchRepoApp",
-    littleDesc: "A vuejs app that fetches my repositories on GitHub.",
-    id: "5",
-    image: "/repoVue.png",
-    imageAlt: "FetchRepo Image",
-    liveUrl: "https://fetchrepowithvue.vercel.app/",
-    githubUrl: "https://github.com/kolapowariz/fetchRepoWithVue",
-    technologies: ["Vuejs", "JavaScript", "CSS", "HTML"],
-  },
-  {
-    title: "RepositoriesApp",
-    littleDesc: "A reactjs app that fetches my repositories on GitHub.",
-    id: "6",
-    image: "/repoReact.png",
-    imageAlt: "Repository Image",
-    liveUrl: "https://alt-second-semester-exam-chi.vercel.app/",
-    githubUrl: "https://github.com/kolapowariz/FetchRepoWithReact",
-    technologies: ["Reactjs", "JavaScript", "CSS", "HTML"],
-  },
+  // {
+  //   title: "FetchRepoApp",
+  //   littleDesc: "A vuejs app that fetches my repositories on GitHub.",
+  //   id: "5",
+  //   image: "/repoVue.png",
+  //   imageAlt: "FetchRepo Image",
+  //   liveUrl: "https://fetchrepowithvue.vercel.app/",
+  //   githubUrl: "https://github.com/kolapowariz/fetchRepoWithVue",
+  //   technologies: ["Vuejs", "JavaScript", "CSS", "HTML"],
+  // },
+  // {
+  //   title: "RepositoriesApp",
+  //   littleDesc: "A reactjs app that fetches my repositories on GitHub.",
+  //   id: "6",
+  //   image: "/repoReact.png",
+  //   imageAlt: "Repository Image",
+  //   liveUrl: "https://alt-second-semester-exam-chi.vercel.app/",
+  //   githubUrl: "https://github.com/kolapowariz/FetchRepoWithReact",
+  //   technologies: ["Reactjs", "JavaScript", "CSS", "HTML"],
+  // },
 ];
 
 export default function Projects() {
   return (
     <section id="projects" className="pt-10">
-      <h2 className="text-center text-4xl mt-10">Projects</h2>
+      <h2 className="text-center text-4xl mt-10">Works</h2>
       <div className="xl:grid lg:mt-6 xl:grid-cols-2 xl:gap-8">
         {projects.map((data) => {
           return (
             <section
               key={data.id}
-              className="bg-[#2a455e] xl:w-[100%] lg:w-[80%] sm:w-[90%] rounded-xl mx-auto"
+              className="bg-[#2c323d] xl:w-[100%] lg:w-[80%] sm:w-[90%] rounded-xl mx-auto"
             >
-              <div className="bg-[#2a455e] sm:w-full rounded-lg flex flex-col sm:flex-row justify-center items-center my-7 mx-auto mb-0">
-                <div className="bg-[#2a455e] w-full h-auto rounded-t-xl sm:rounded-none sm:w-96 sm:h-48 sm:rounded-s-2xl p-4">
+              <div className="bg-[#2c323d] sm:w-full rounded-lg flex flex-col sm:flex-row justify-center items-center my-7 mx-auto mb-0">
+                <div className="bg-[#2c323d] w-full h-auto rounded-t-xl sm:rounded-none sm:w-96 sm:h-48 sm:rounded-s-2xl p-4">
                   <h1 className="text-center text-2xl mb-2">{data.title}</h1>
                   <p className="mb-4">{data.littleDesc}</p>
                   <div className="flex gap-2 justify-center">
@@ -128,7 +124,7 @@ export default function Projects() {
                     </a>
                   </div>
                 </div>
-                <div className="w-full h-auto rounded-b-xl sm:rounded-none sm:w-96 sm:h-48 bg-[#2a455e] sm:rounded-e-2xl p-4">
+                <div className="w-full h-auto rounded-b-xl sm:rounded-none sm:w-96 sm:h-48 bg-[#2c323d] sm:rounded-e-2xl p-4">
                   <Image
                     src={data.image}
                     alt={data.imageAlt}
@@ -138,13 +134,13 @@ export default function Projects() {
                   />
                 </div>
               </div>
-              <section className="bg-[#2a455e] p-2 rounded-xl">
+              <section className="bg-[#2c323d] p-2 rounded-xl">
                 <p className="text-center mb-2">Technologies</p>
                 <ul className="flex flex-wrap gap-2 justify-center">
                   {data.technologies.map((tech) => (
                     <li
                       key={tech}
-                      className="bg-[#4c6d8b] rounded-lg p-2 text-center"
+                      className="bg-[#40495a] rounded-lg p-2 text-center"
                     >
                       {tech}
                     </li>
