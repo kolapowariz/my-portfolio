@@ -7,7 +7,7 @@ const projects = [
     id: "2",
     image: "/podifyit.png",
     imageAlt: "PodifyIt Image",
-    liveUrl: "https://podifyit.vercel.app/",
+    liveUrl: "https://www.podifyit.tech/",
     githubUrl: "https://github.com/kolapowariz/podifyit",
     technologies: [
       "Nextjs",
@@ -24,7 +24,7 @@ const projects = [
       "A web application for authors and readers to create and access content.",
     id: "1",
     image: "/wavvysort.png",
-    imageAlt: "Healler Image",
+    imageAlt: "wavvySort Image",
     liveUrl: "https://wavvysort.vercel.app/",
     githubUrl: "https://github.com/kolapowariz/wavvysort",
     technologies: [
@@ -70,26 +70,6 @@ const projects = [
       "TypeScript",
     ],
   },
-  // {
-  //   title: "FetchRepoApp",
-  //   littleDesc: "A vuejs app that fetches my repositories on GitHub.",
-  //   id: "5",
-  //   image: "/repoVue.png",
-  //   imageAlt: "FetchRepo Image",
-  //   liveUrl: "https://fetchrepowithvue.vercel.app/",
-  //   githubUrl: "https://github.com/kolapowariz/fetchRepoWithVue",
-  //   technologies: ["Vuejs", "JavaScript", "CSS", "HTML"],
-  // },
-  // {
-  //   title: "RepositoriesApp",
-  //   littleDesc: "A reactjs app that fetches my repositories on GitHub.",
-  //   id: "6",
-  //   image: "/repoReact.png",
-  //   imageAlt: "Repository Image",
-  //   liveUrl: "https://alt-second-semester-exam-chi.vercel.app/",
-  //   githubUrl: "https://github.com/kolapowariz/FetchRepoWithReact",
-  //   technologies: ["Reactjs", "JavaScript", "CSS", "HTML"],
-  // },
 ];
 
 export default function Projects() {

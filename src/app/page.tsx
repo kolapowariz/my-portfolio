@@ -202,7 +202,7 @@ export default function Home() {
               impact.
             </p>
             <Button className="mt-10 text-2xl p-5 rounded-full border-green-800">
-              <Link href="/01KolapoWarizResume.pdf" target="_blank">
+              <Link href="/01KolapoWariz.pdf">
                 View Resume
               </Link>
               <FileIcon width={20} height={20} className="ml-2" />
