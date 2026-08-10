@@ -17,7 +17,7 @@ export default function Home() {
   };
 
   return (
-    <div className="w-[90%] mx-auto bg-[#121418] text-gray-200 font-mono">
+    <div className="w-[90%] mx-auto bg-[#111310] text-gray-200 font-mono">
       <header className="md:hidden flex justify-between items-center mt-3 mx-auto py-5 px-3 w-[90%] bg-[#2c323d] shadow-2xl rounded-md fixed">
         <motion.h1
           initial={{ x: -200 }}
@@ -202,9 +202,7 @@ export default function Home() {
               impact.
             </p>
             <Button className="mt-10 text-2xl p-5 rounded-full border-green-800">
-              <Link href="/01KolapoWariz.pdf">
-                View Resume
-              </Link>
+              <Link href="/01KolapoWariz.pdf">View Resume</Link>
               <FileIcon width={20} height={20} className="ml-2" />
             </Button>
             <div className="mt-10">
