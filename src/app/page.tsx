@@ -25,7 +25,7 @@ export default function Home() {
           transition={{ duration: 2 }}
           className="text-lg"
         >
-          Wariz
+          KO
         </motion.h1>
         <nav className="flex flex-col justify-center items-end">
           <button onClick={toggle}>
@@ -122,7 +122,7 @@ export default function Home() {
           transition={{ duration: 2 }}
           className="text-md"
         >
-          Wariz
+          KO
         </motion.h1>
         <motion.nav
           initial={{ x: 1000 }}
