@@ -7,7 +7,7 @@ const projects = [
     id: "2",
     image: "/podifyit.png",
     imageAlt: "PodifyIt Image",
-    liveUrl: "https://www.podifyit.tech/",
+    liveUrl: "https://podifyit.vercel.app/",
     githubUrl: "https://github.com/kolapowariz/podifyit",
     technologies: [
       "Nextjs",
@@ -74,7 +74,7 @@ const projects = [
 
 export default function Projects() {
   return (
-    <section id="projects" className="pt-10">
+    <section id="works" className="pt-10">
       <h2 className="text-center text-4xl mt-10">Works</h2>
       <div className="xl:grid lg:mt-6 xl:grid-cols-2 xl:gap-8">
         {projects.map((data) => {

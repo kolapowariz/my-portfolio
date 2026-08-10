@@ -67,7 +67,7 @@ export default function Home() {
                 <Link href="#">Home</Link>
               </li>
               <li className="py-1">
-                <Link href="#projects">Works</Link>
+                <Link href="#works">Works</Link>
               </li>
               <li className="py-1">
                 <Link href="#contact">Contact</Link>
@@ -135,7 +135,7 @@ export default function Home() {
               <Link href="#">Home</Link>
             </li>
             <li className="py-2">
-              <Link href="#projects">Works</Link>
+              <Link href="#works">Works</Link>
             </li>
             <li className="py-2">
               <Link href="#contact">Contact</Link>
