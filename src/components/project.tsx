@@ -25,7 +25,7 @@ const projects = [
     id: "1",
     image: "/wavvysort.png",
     imageAlt: "wavvySort Image",
-    liveUrl: "https://wavvysort.vercel.app/",
+    liveUrl: "https://github.com/kolapowariz/wavvysort",
     githubUrl: "https://github.com/kolapowariz/wavvysort",
     technologies: [
       "Nextjs",
@@ -42,7 +42,7 @@ const projects = [
     id: "3",
     image: "/Radercoin.png",
     imageAlt: "RaderCoin Image",
-    liveUrl: "https://radercoin.vercel.app/",
+    liveUrl: "https://github.com/kolapowariz/radercoin",
     githubUrl: "https://github.com/kolapowariz/radercoin",
     technologies: [
       "Nextjs",
